@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - VintageTreasures</title>
+    <link rel="stylesheet" href="katalogProdukStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="landingPage.html" class="logo">Vintage<span>Treasures</span></a>
+                <div class="nav-links">
+                    <a href="landingPage.html">Home</a>
+                    <a href="artikel.html">Artikel</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span>0</span>
+                    </a>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Katalog Produk</h1>
+            <div class="breadcrumb">
+                <a href="landingPage.html">Home</a>
+                <span>/</span>
+                <span>Katalog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <!-- Mobile Filter Toggle -->
+            <div class="filter-toggle">
+                <span>Tampilkan Filter</span>
+            </div>
+            
+            <div class="catalog-container">
+                <!-- Filters Sidebar -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <h3 class="filter-title">Kategori</h3>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category1">
+                                <label for="category1">Elektronik (24)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category2">
+                                <label for="category2">Furnitur (18)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category3">
+                                <label for="category3">Aksesoris (32)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category4">
+                                <label for="category4">Pakaian (15)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="category5">
+                                <label for="category5">Dekorasi (22)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Rentang Harga</h3>
+                        <div class="price-range">
+                            <input type="text" placeholder="Min">
+                            <input type="text" placeholder="Max">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Era</h3>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="era1">
+                                <label for="era1">1950s (12)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="era2">
+                                <label for="era2">1960s (28)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="era3">
+                                <label for="era3">1970s (35)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="era4">
+                                <label for="era4">1980s (41)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="era5">
+                                <label for="era5">1990s (16)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Kondisi</h3>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="condition1">
+                                <label for="condition1">Seperti Baru (14)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="condition2">
+                                <label for="condition2">Sangat Baik (32)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="condition3">
+                                <label for="condition3">Baik (47)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="condition4">
+                                <label for="condition4">Cukup (18)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-btn apply-btn">Terapkan</button>
+                        <button class="filter-btn reset-btn">Reset</button>
+                    </div>
+                </div>
+                
+                <!-- Products Area -->
+                <div class="products-area">
+                    <div class="toolbar">
+                        <div class="found-items">
+                            <span>Menampilkan 1-9 dari 45 produk</span>
+                        </div>
+                        <div class="sort-filter">
+                            <select>
+                                <option>Urutkan berdasarkan</option>
+                                <option>Harga: Rendah ke Tinggi</option>
+                                <option>Harga: Tinggi ke Rendah</option>
+                                <option>Era: Lama ke Baru</option>
+                                <option>Era: Baru ke Lama</option>
+                                <option>Nama: A-Z</option>
+                                <option>Nama: Z-A</option>
+                            </select>
+                            <div class="view-options">
+                                <button class="view-btn active">📱</button>
+                                <button class="view-btn">📋</button>
+                            </div>
+                        </div>
+                        <div class="search-bar">
+                            <input type="text" placeholder="Cari produk...">
+                            <button class="search-btn">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Elektronik</p>
+                                <h3 class="product-title">Radio Klasik 1960</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 1.500.000</span>
+                                    <span class="product-year">1960</span>
+                                </div>
+                                <p class="product-description">Radio antik dengan desain klasik dan suara yang masih jernih. Kondisi sangat baik dan terawat.</p>
+                                <div class="product-buttons">
+                                    <a href="detailProduk.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <img src="https://m.media-amazon.com/images/I/81It0kFPq5L._AC_SX466_.jpg" alt="Kamera Vintage" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Elektronik</p>
+                                <h3 class="product-title">Kamera Polaroid SX-70</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 2.200.000</span>
+                                    <span class="product-year">1972</span>
+                                </div>
+                                <p class="product-description">Kamera Polaroid ikonik dengan fitur fold-down yang elegan. Dalam kondisi baik dan masih berfungsi.</p>
+                                <div class="product-buttons">
+                                    <a href="landingPage\landingPage.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <img src="https://images-cdn.ubuy.co.id/633bd723faec9b4e8e02b93c-olden-days-wall-clock-with-real-wood-4.jpg" alt="Jam Dinding Antik" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Dekorasi</p>
+                                <h3 class="product-title">Jam Dinding Antik</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 950.000</span>
+                                    <span class="product-year">1955</span>
+                                </div>
+                                <p class="product-description">Jam dinding antik dengan ukiran kayu yang indah dan detil. Mekanisme jam masih berfungsi dengan baik.</p>
+                                <div class="product-buttons">
+                                    <a href="landingPage\landingPage.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <img src="https://www.sencor.com/getmedia/7160a430-53c5-4ee9-9a69-c6f179585f29/35038326.jpg.aspx?width=2100&height=2100&ext=.jpg" alt="Gramofon Klasik" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Elektronik</p>
+                                <h3 class="product-title">Gramofon Klasik</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 3.800.000</span>
+                                    <span class="product-year">1948</span>
+                                </div>
+                                <p class="product-description">Gramofon klasik dengan horn speaker. Desain yang elegan dengan badan dari kayu berkualitas tinggi.</p>
+                                <div class="product-buttons">
+                                    <a href="landingPage\landingPage.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <img src="https://hobikoe.com/uploads/all/gthGjcbmdGJv4fwhbHxZ7HLHcv58cNFklu955OYD.jpeg" alt="Telepon Putar Retro" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Elektronik</p>
+                                <h3 class="product-title">Telepon Putar Retro</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 750.000</span>
+                                    <span class="product-year">1965</span>
+                                </div>
+                                <p class="product-description">Telepon putar klasik dari era 60-an. Warna hitam dengan dial putar yang masih lancar.</p>
+                                <div class="product-buttons">
+                                    <a href="landingPage\landingPage.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/360942678/BP/RI/NR/59405872/product-jpeg-45-500x500.jpg" alt="Meja Rias Vintage" class="product-img">
+                            <div class="product-info">
+                                <p class="product-category">Furnitur</p>
+                                <h3 class="product-title">Meja Rias Vintage</h3>
+                                <div class="product-meta">
+                                    <span class="product-price">Rp 4.200.000</span>
+                                    <span class="product-year">1958</span>
+                                </div>
+                                <p class="product-description">Meja rias vintage dengan cermin oval dan laci-laci penyimpanan. Kayu jati berkualitas tinggi.</p>
+                                <div class="product-buttons">
+                                    <a href="landingPage\landingPage.html" class="btn btn-sm">Lihat Detail</a>
+                                    <button class="btn btn-sm btn-outline wishlist-btn">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>                
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VintageTreasures</h3>
+                    <p>Temukan keindahan masa lalu melalui koleksi barang vintage berkualitas tinggi kami.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan</h3>
+                    <a href="index.html">Home</a>
+                    <a href="catalog.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#">Elektronik</a>
+                    <a href="#">Furnitur</a>
+                    <a href="#">Aksesoris</a>
+                    <a href="#">Pakaian</a>
+                    <a href="#">Dekorasi</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p>📍 Jl. Vintage No. 123, Jakarta</p>
+                    <p>📱 +62 123 456 789</p>
+                    <p>✉️ info@vintagetreasures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 VintageTreasures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Scroll animation for testimonials
+        const testimonials = document.querySelector('.testimonials-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        testimonials.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - testimonials.offsetLeft;
+            scrollLeft = testimonials.scrollLeft;
+        });
+        
+        testimonials.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        
+        testimonials.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        
+        testimonials.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - testimonials.offsetLeft;
+            const walk = (x - startX) * 2;
+            testimonials.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>                 
