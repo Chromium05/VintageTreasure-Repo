@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - VintageTreasures</title>
+    <link rel="stylesheet" href="keranjangStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="landingPage.html" class="logo">Vintage<span>Treasures</span></a>
+                <div class="nav-links">
+                    <a href="landingPage.html">Home</a>
+                    <a href="artikel.html">Artikel</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span>1</span>
+                    </a>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Checkout</h1>
+            <div class="breadcrumb">
+                <a href="landingPage.html">Home</a>
+                <span>/</span>
+                <a href="cart.html">Keranjang</a>
+                <span>/</span>
+                <span>Checkout</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <h2 class="form-title">Data Pengiriman</h2>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nama Depan</label>
+                                <input type="text" id="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nama Belakang</label>
+                                <input type="text" id="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Alamat</label>
+                            <input type="text" id="address" class="form-control" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Kota</label>
+                                <input type="text" id="city" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Kode Pos</label>
+                                <input type="text" id="postalCode" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="province">Provinsi</label>
+                            <select id="province" class="form-control" required>
+                                <option value="">Pilih Provinsi</option>
+                                <option value="DKI Jakarta">DKI Jakarta</option>
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <option value="Jawa Timur">Jawa Timur</option>
+                                <option value="Bali">Bali</option>
+                                <option value="Sumatera Utara">Sumatera Utara</option>
+                                <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Metode Pengiriman</label>
+                            <div class="radio-group">
+                                <div class="form-check">
+                                    <input type="radio" id="regularShipping" name="shipping" checked>
+                                    <label for="regularShipping">Reguler (2-3 hari) - Rp 50.000</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="expressShipping" name="shipping">
+                                    <label for="expressShipping">Express (1 hari) - Rp 100.000</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="sameDay" name="shipping">
+                                    <label for="sameDay">Same Day (Jabodetabek) - Rp 150.000</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h2 class="form-title">Metode Pembayaran</h2>
+                    <div class="payment-methods">
+                        <div class="payment-method active" onclick="selectPayment(this, 'creditCard')">
+                            <input type="radio" id="creditCard" name="payment" checked>
+                            <img src="/api/placeholder/50/30" alt="Credit Card">
+                            <label for="creditCard">Kartu Kredit / Debit</label>
+                        </div>
+                        <div class="payment-method" onclick="selectPayment(this, 'bankTransfer')">
+                            <input type="radio" id="bankTransfer" name="payment">
+                            <img src="/api/placeholder/50/30" alt="Bank Transfer">
+                            <label for="bankTransfer">Transfer Bank</label>
+                        </div>
+                        <div class="payment-method" onclick="selectPayment(this, 'eWallet')">
+                            <input type="radio" id="eWallet" name="payment">
+                            <img src="/api/placeholder/50/30" alt="E-Wallet">
+                            <label for="eWallet">E-Wallet</label>
+                        </div>
+                    </div>
+                    
+                    <div id="creditCardDetails" class="payment-details active">
+                        <div class="form-group">
+                            <label for="cardName">Nama pada Kartu</label>
+                            <input type="text" id="cardName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Nomor Kartu</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="XXXX XXXX XXXX XXXX" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Tanggal Kadaluarsa</label>
+                                <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" class="form-control" placeholder="XXX" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="bankTransferDetails" class="payment-details">
+                        <p>Silakan transfer ke rekening bank berikut:</p>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Bank BCA - 1234567890 (VintageTreasures)</option>
+                                <option>Bank Mandiri - 9876543210 (VintageTreasures)</option>
+                                <option>Bank BNI - 5678901234 (VintageTreasures)</option>
+                            </select>
+                        </div>
+                        <p>Setelah transfer, silakan unggah bukti pembayaran:</p>
+                        <div class="form-group">
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div id="eWalletDetails" class="payment-details">
+                        <div class="form-group">
+                            <label>Pilih E-Wallet</label>
+                            <div class="radio-group">
+                                <div class="form-check">
+                                    <input type="radio" id="ovo" name="ewallet" checked>
+                                    <label for="ovo">OVO</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="gopay" name="ewallet">
+                                    <label for="gopay">GoPay</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="dana" name="ewallet">
+                                    <label for="dana">DANA</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneEwallet">Nomor Telepon E-Wallet</label>
+                            <input type="tel" id="phoneEwallet" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2 class="summary-title">Ringkasan Pesanan</h2>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik 1960">
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-name">Radio Klasik 1960</h3>
+                                <div class="item-meta">
+                                    <span>Quantity: 1</span>
+                                    <span>Tahun: 1960</span>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                Rp 1.500.000
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="voucher-form">
+                        <input type="text" class="form-control" placeholder="Kode Voucher">
+                        <button class="btn btn-outline">Terapkan</button>
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>Rp 1.500.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pengiriman</span>
+                            <span>Rp 50.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pajak (10%)</span>
+                            <span>Rp 150.000</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>Rp 1.700.000</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-block" style="margin-top: 30px;">Proses Pembayaran</button>
+                    
+                    <div class="security-badge">
+                        <span>🔒</span>
+                        <p>Pembayaran Anda aman dan terenkripsi. Data pribadi Anda dilindungi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VintageTreasures</h3>
+                    <p>Temukan keindahan masa lalu melalui koleksi barang vintage berkualitas tinggi kami.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan</h3>
+                    <a href="landingPage.html">Home</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#">Elektronik</a>
+                    <a href="#">Furnitur</a>
+                    <a href="#">Aksesoris</a>
+                    <a href="#">Pakaian</a>
+                    <a href="#">Dekorasi</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p>📍 Jl. Vintage No. 123, Jakarta</p>
+                    <p>📱 +62 123 456 789</p>
+                    <p>✉️ info@vintagetreasures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 VintageTreasures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Payment method selection
+        function selectPayment(element, paymentId) {
+            // Reset all payment methods
+            document.querySelectorAll('.payment-method').forEach(method => {
+                method.classList.remove('active');
+            });
+            document.querySelectorAll('.payment-details').forEach(details => {
+                details.classList.remove('active');
+            });
+            
+            // Set the selected payment method as active
+            element.classList.add('active');
+            document.getElementById(paymentId + 'Details').classList.add('active');
+            
+            // Check the radio button
+            document.getElementById(paymentId).checked = true;
+        }
+    </script>
+</body>
+</html>
