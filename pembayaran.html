@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - VintageTreasures</title>
+    <link rel="stylesheet" href="checkoutStyle.css">
+    <link rel="stylesheet" href="pembayaranStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="landingPage.html" class="logo">Vintage<span>Treasures</span></a>
+                <div class="nav-links">
+                    <a href="landingPage.html">Home</a>
+                    <a href="artikel.html">Artikel</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span>1</span>
+                    </a>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Pembayaran</h1>
+            <div class="breadcrumb">
+                <a href="landingPage.html">Home</a>
+                <span>/</span>
+                <a href="cart.html">Keranjang</a>
+                <span>/</span>
+                <a href="keranjang.html">Checkout</a>
+                <span>/</span>
+                <span>Pembayaran</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="checkout-section">
+        <div class="container">
+            
+            <div class="checkout-container">
+                <!-- Payment Confirmation -->
+                <div class="payment-confirmation">
+                    <h2 class="form-title">Konfirmasi Pembayaran</h2>
+                    
+                    <div class="payment-details-summary">
+                        <p><strong>Metode Pembayaran:</strong> Transfer Bank BCA</p>
+                        <p><strong>Nomor Rekening:</strong> 1234567890 (VintageTreasures)</p>
+                        <p><strong>Total Pembayaran:</strong> Rp 1.700.000</p>
+                        <p><strong>Kode Unik:</strong> Rp 1.700.123</p>
+                    </div>
+                    
+                    <div class="payment-timer">
+                        <p>Selesaikan pembayaran Anda dalam:</p>
+                        <div class="timer-count" id="paymentTimer">23:59:59</div>
+                        <p>Batas waktu pembayaran: 13 Mei 2025, 04:17 WIB</p>
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Transfer tepat sebesar <strong>Rp 1.700.123</strong> ke rekening BCA yang tertera di atas.</li>
+                            <li>Pastikan Anda mentransfer dengan jumlah yang tepat termasuk kode unik untuk memudahkan verifikasi.</li>
+                            <li>Setelah melakukan pembayaran, unggah bukti pembayaran pada form di bawah.</li>
+                            <li>Pembayaran akan diverifikasi dalam waktu 1x24 jam kerja.</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="payment-qr">
+                        <p>Atau scan QR code berikut untuk pembayaran instan:</p>
+                        <div class="qr-code">
+                            <img src="/placeholder.svg?height=180&width=180" alt="QR Code Pembayaran">
+                        </div>
+                        <p>QR Code berlaku hingga batas waktu pembayaran</p>
+                    </div>
+                    
+                    <div class="upload-proof">
+                        <h3>Unggah Bukti Pembayaran</h3>
+                        <p>Unggah bukti transfer atau screenshot pembayaran Anda di sini:</p>
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">📤</div>
+                            <p>Klik atau seret file bukti pembayaran Anda ke sini</p>
+                            <p>Format yang didukung: JPG, PNG, PDF (Maks. 5MB)</p>
+                        </div>
+                        <input type="file" id="paymentProof" style="display: none;">
+                    </div>
+                    
+                    <div class="payment-actions">
+                        <button class="btn btn-block" id="confirmPaymentBtn">Konfirmasi Pembayaran</button>
+                        <button class="btn btn-block btn-outline" id="payLaterBtn">Bayar Nanti</button>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2 class="summary-title">Ringkasan Pesanan</h2>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik 1960">
+                            </div>
+                            <div class="item-details">
+                                <h3 class="item-name">Radio Klasik 1960</h3>
+                                <div class="item-meta">
+                                    <span>Quantity: 1</span>
+                                    <span>Tahun: 1960</span>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                Rp 1.500.000
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>Rp 1.500.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pengiriman</span>
+                            <span>Rp 50.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pajak (10%)</span>
+                            <span>Rp 150.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Kode Unik</span>
+                            <span>Rp 123</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>Rp 1.700.123</span>
+                        </div>
+                    </div>
+                    
+                    <div class="security-badge">
+                        <span>🔒</span>
+                        <p>Pembayaran Anda aman dan terenkripsi. Data pribadi Anda dilindungi.</p>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <h3>Informasi Pengiriman</h3>
+                        <p style="margin-top: 10px;"><strong>Nama:</strong> <span id="customerName">-</span></p>
+                        <p><strong>Alamat:</strong> <span id="customerAddress">-</span></p>
+                        <p><strong>Kota:</strong> <span id="customerCity">-</span></p>
+                        <p><strong>Kode Pos:</strong> <span id="customerPostal">-</span></p>
+                        <p><strong>Metode Pengiriman:</strong> Reguler (2-3 hari)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VintageTreasures</h3>
+                    <p>Temukan keindahan masa lalu melalui koleksi barang vintage berkualitas tinggi kami.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan</h3>
+                    <a href="landingPage.html">Home</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#">Elektronik</a>
+                    <a href="#">Furnitur</a>
+                    <a href="#">Aksesoris</a>
+                    <a href="#">Pakaian</a>
+                    <a href="#">Dekorasi</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p>📍 Jl. Vintage No. 123, Jakarta</p>
+                    <p>📱 +62 123 456 789</p>
+                    <p>✉️ info@vintagetreasures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 VintageTreasures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // File Upload Handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('paymentProof');
+        
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--primary-color)';
+            uploadArea.style.backgroundColor = 'rgba(183, 93, 50, 0.05)';
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = 'var(--gray)';
+            uploadArea.style.backgroundColor = 'transparent';
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--gray)';
+            uploadArea.style.backgroundColor = 'transparent';
+            
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                updateFileName(e.dataTransfer.files[0].name);
+            }
+        });
+        
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) {
+                updateFileName(fileInput.files[0].name);
+            }
+        });
+        
+        function updateFileName(name) {
+            const uploadIcon = document.querySelector('.upload-icon');
+            uploadIcon.textContent = '✓';
+            uploadIcon.style.color = 'green';
+            
+            const uploadText = document.querySelectorAll('.upload-area p');
+            uploadText[0].textContent = `File dipilih: ${name}`;
+            uploadText[1].textContent = 'Klik untuk mengubah file';
+        }
+        
+        // Payment Timer
+        function startTimer() {
+            const timerElement = document.getElementById('paymentTimer');
+            let hours = 23;
+            let minutes = 59;
+            let seconds = 59;
+            
+            const timer = setInterval(() => {
+                seconds--;
+                
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                
+                if (hours < 0) {
+                    clearInterval(timer);
+                    timerElement.textContent = '00:00:00';
+                    timerElement.style.color = 'red';
+                    return;
+                }
+                
+                timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        // Load customer data from previous page
+        function loadCustomerData() {
+            // In a real application, this would come from localStorage, sessionStorage, or a backend
+            // For demo purposes, we'll just set some placeholder data
+            document.getElementById('customerName').textContent = 'John Doe';
+            document.getElementById('customerAddress').textContent = 'Jl. Merdeka No. 123';
+            document.getElementById('customerCity').textContent = 'Jakarta';
+            document.getElementById('customerPostal').textContent = '12345';
+        }
+        
+        // Button actions
+        document.getElementById('confirmPaymentBtn').addEventListener('click', () => {
+            if (!fileInput.files.length) {
+                alert('Silakan unggah bukti pembayaran terlebih dahulu.');
+                return;
+            }
+            
+            // In a real application, you would upload the file to a server here
+            alert('Terima kasih! Bukti pembayaran Anda telah diterima dan akan segera diverifikasi.');
+            window.location.href = 'konfirmasi.html'; // Redirect to confirmation page
+        });
+        
+        document.getElementById('payLaterBtn').addEventListener('click', () => {
+            if (confirm('Anda yakin ingin menunda pembayaran? Pesanan Anda akan disimpan dan dapat diakses melalui halaman akun Anda.')) {
+                window.location.href = 'landingPage.html'; // Redirect to home page
+            }
+        });
+        
+        // Initialize page
+        window.addEventListener('load', () => {
+            startTimer();
+            loadCustomerData();
+        });
+    </script>
+</body>
+</html>

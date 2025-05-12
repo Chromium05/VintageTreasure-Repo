@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - VintageTreasures</title>
-    <link rel="stylesheet" href="keranjangStyle.css">
+    <link rel="stylesheet" href="checkoutStyle.css">
 </head>
 <body>
     <!-- Header -->
@@ -123,17 +123,17 @@
                     <div class="payment-methods">
                         <div class="payment-method active" onclick="selectPayment(this, 'creditCard')">
                             <input type="radio" id="creditCard" name="payment" checked>
-                            <img src="/api/placeholder/50/30" alt="Credit Card">
+                            <img src="https://w7.pngwing.com/pngs/204/392/png-transparent-worldpay-logo-payment-credit-card-debit-card-creative-foundation-text-service-logo.png" alt="Credit Card">
                             <label for="creditCard">Kartu Kredit / Debit</label>
                         </div>
                         <div class="payment-method" onclick="selectPayment(this, 'bankTransfer')">
                             <input type="radio" id="bankTransfer" name="payment">
-                            <img src="/api/placeholder/50/30" alt="Bank Transfer">
+                            <img src="https://i0.wp.com/www.dataindustri.com/wp-content/uploads/2020/10/logo-bank.png?ssl=1" alt="Bank Transfer">
                             <label for="bankTransfer">Transfer Bank</label>
                         </div>
                         <div class="payment-method" onclick="selectPayment(this, 'eWallet')">
                             <input type="radio" id="eWallet" name="payment">
-                            <img src="/api/placeholder/50/30" alt="E-Wallet">
+                            <img src="https://i0.wp.com/www.dataindustri.com/wp-content/uploads/2020/10/logo-bank.png?ssl=1" alt="E-Wallet">
                             <label for="eWallet">E-Wallet</label>
                         </div>
                     </div>
@@ -160,17 +160,13 @@
                     </div>
                     
                     <div id="bankTransferDetails" class="payment-details">
-                        <p>Silakan transfer ke rekening bank berikut:</p>
+                        <p>Silakan pilih bank tujuan transfer:</p>
                         <div class="form-group">
                             <select class="form-control">
                                 <option>Bank BCA - 1234567890 (VintageTreasures)</option>
                                 <option>Bank Mandiri - 9876543210 (VintageTreasures)</option>
                                 <option>Bank BNI - 5678901234 (VintageTreasures)</option>
                             </select>
-                        </div>
-                        <p>Setelah transfer, silakan unggah bukti pembayaran:</p>
-                        <div class="form-group">
-                            <input type="file" class="form-control">
                         </div>
                     </div>
                     
@@ -244,7 +240,7 @@
                         </div>
                     </div>
                     
-                    <button class="btn btn-block" style="margin-top: 30px;">Proses Pembayaran</button>
+                    <button class="btn btn-block" style="margin-top: 30px;" onclick="location.href='pembayaran.html'">Proses Pembayaran </button>
                     
                     <div class="security-badge">
                         <span>🔒</span>

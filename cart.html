@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - VintageTreasures</title>
+    <link rel="stylesheet" href="checkoutStyle.css">
+    <link rel="stylesheet" href="cartStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="landingPage.html" class="logo">Vintage<span>Treasures</span></a>
+                <div class="nav-links">
+                    <a href="landingPage.html">Home</a>
+                    <a href="artikel.html">Artikel</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span>2</span>
+                    </a>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Keranjang Belanja</h1>
+            <div class="breadcrumb">
+                <a href="landingPage.html">Home</a>
+                <span>/</span>
+                <span>Keranjang</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <h2 class="section-title">Barang dalam Keranjang (2)</h2>
+                    
+                    <div class="cart-header">
+                        <div class="product-info-header">Produk</div>
+                        <div class="product-price-header">Harga</div>
+                        <div class="product-quantity-header">Jumlah</div>
+                        <div class="product-subtotal-header">Subtotal</div>
+                        <div class="product-action-header"></div>
+                    </div>
+                    
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                        <div class="product-info">
+                            <div class="product-image">
+                                <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik 1960">
+                            </div>
+                            <div class="product-details">
+                                <h3>Radio Klasik 1960</h3>
+                                <p>Tahun: 1960</p>
+                                <p>Kondisi: Sangat Baik</p>
+                            </div>
+                        </div>
+                        <div class="product-price">Rp 1.500.000</div>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="text" value="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="product-subtotal">Rp 1.500.000</div>
+                        <div class="product-action">
+                            <button class="remove-btn">✕</button>
+                            <button class="save-btn">♡</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <div class="product-info">
+                            <div class="product-image">
+                                <img src="https://www.sencor.com/getmedia/7160a430-53c5-4ee9-9a69-c6f179585f29/35038326.jpg.aspx?width=2100&height=2100&ext=.jpg" alt="Gramofon Klasik">
+                            </div>
+                            <div class="product-details">
+                                <h3>Gramofon Klasik</h3>
+                                <p>Tahun: 1948</p>
+                                <p>Kondisi: Baik</p>
+                            </div>
+                        </div>
+                        <div class="product-price">Rp 3.800.000</div>
+                        <div class="product-quantity">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="text" value="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="product-subtotal">Rp 3.800.000</div>
+                        <div class="product-action">
+                            <button class="remove-btn">✕</button>
+                            <button class="save-btn">♡</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <div class="continue-shopping">
+                            <a href="katalogProduk.html" class="btn btn-outline">
+                                <span>← Lanjutkan Belanja</span>
+                            </a>
+                        </div>
+                        <div class="update-cart">
+                            <button class="btn btn-outline">Perbarui Keranjang</button>
+                            <button class="btn btn-outline clear-cart">Kosongkan Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2 class="summary-title">Ringkasan Belanja</h2>
+                    
+                    <div class="coupon-section">
+                        <h3>Kode Promo</h3>
+                        <div class="coupon-form">
+                            <input type="text" class="form-control" placeholder="Masukkan kode promo">
+                            <button class="btn">Terapkan</button>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>Rp 6.050.000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Diskon</span>
+                            <span>Rp 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Estimasi Pengiriman</span>
+                            <span>Dihitung saat checkout</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>Rp 6.050.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-button">
+                        <button class="btn btn-block" onclick="location.href='checkout.html'">Lanjutkan ke Checkout</button>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <p>Metode Pembayaran yang Tersedia:</p>
+                        <div class="payment-icons">
+                            <img src="/api/placeholder/50/30" alt="Visa">
+                            <img src="/api/placeholder/50/30" alt="Mastercard">
+                            <img src="/api/placeholder/50/30" alt="BCA">
+                            <img src="/api/placeholder/50/30" alt="Mandiri">
+                        </div>
+                    </div>
+                    
+                    <div class="security-badge">
+                        <span>🔒</span>
+                        <p>Belanja aman dan terjamin. Data pribadi Anda dilindungi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recommended Products -->
+            <div class="recommended-products">
+                <h2 class="section-title">Rekomendasi untuk Anda</h2>
+                <div class="products-slider">
+                    <div class="product-card">
+                        <img src="https://images-cdn.ubuy.co.id/633bd723faec9b4e8e02b93c-olden-days-wall-clock-with-real-wood-4.jpg" alt="Jam Dinding Antik" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Jam Dinding Antik</h3>
+                            <p class="product-price">Rp 950.000</p>
+                            <button class="btn btn-sm">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/81It0kFPq5L._AC_SX466_.jpg" alt="Kamera Polaroid SX-70" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Kamera Polaroid SX-70</h3>
+                            <p class="product-price">Rp 2.200.000</p>
+                            <button class="btn btn-sm">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/8/29/590f3499-74cb-4e95-8f61-e6146688437e.jpg" alt="Televisi Tabung 1970" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Televisi Tabung 1970</h3>
+                            <p class="product-price">Rp 2.350.000</p>
+                            <button class="btn btn-sm">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/360942678/BP/RI/NR/59405872/product-jpeg-45-500x500.jpg" alt="Meja Rias Vintage" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-title">Meja Rias Vintage</h3>
+                            <p class="product-price">Rp 4.200.000</p>
+                            <button class="btn btn-sm">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="recently-viewed">
+        <div class="container">
+            <h2 class="section-title">Terakhir Dilihat</h2>
+            <div class="products-slider">
+                <div class="product-card">
+                    <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/8/29/590f3499-74cb-4e95-8f61-e6146688437e.jpg" alt="Televisi Tabung 1970" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Televisi Tabung 1970</h3>
+                        <p class="product-price">Rp 2.350.000</p>
+                        <button class="btn btn-sm">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/81It0kFPq5L._AC_SX466_.jpg" alt="Kamera Polaroid SX-70" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Kamera Polaroid SX-70</h3>
+                        <p class="product-price">Rp 2.200.000</p>
+                        <button class="btn btn-sm">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik 1960" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Radio Klasik 1960</h3>
+                        <p class="product-price">Rp 1.500.000</p>
+                        <button class="btn btn-sm">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Cart Template (hidden by default) -->
+    <section class="empty-cart" style="display: none;">
+        <div class="container">
+            <div class="empty-cart-container">
+                <div class="empty-cart-icon">🛒</div>
+                <h2>Keranjang Belanja Anda Kosong</h2>
+                <p>Anda belum menambahkan barang apapun ke keranjang belanja.</p>
+                <a href="katalogProduk.html" class="btn">Mulai Belanja</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VintageTreasures</h3>
+                    <p>Temukan keindahan masa lalu melalui koleksi barang vintage berkualitas tinggi kami.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan</h3>
+                    <a href="landingPage.html">Home</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#">Elektronik</a>
+                    <a href="#">Furnitur</a>
+                    <a href="#">Aksesoris</a>
+                    <a href="#">Pakaian</a>
+                    <a href="#">Dekorasi</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p>📍 Jl. Vintage No. 123, Jakarta</p>
+                    <p>📱 +62 123 456 789</p>
+                    <p>✉️ info@vintagetreasures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 VintageTreasures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Quantity selector functionality
+        document.querySelectorAll('.quantity-selector').forEach(selector => {
+            const minusBtn = selector.querySelector('.minus');
+            const plusBtn = selector.querySelector('.plus');
+            const qtyInput = selector.querySelector('.qty-input');
+            const cartItem = selector.closest('.cart-item');
+            const priceElement = cartItem.querySelector('.product-price');
+            const subtotalElement = cartItem.querySelector('.product-subtotal');
+            
+            // Get the price value
+            const price = parseFloat(priceElement.textContent.replace('Rp ', '').replace('.', ''));
+            
+            // Update subtotal function
+            const updateSubtotal = () => {
+                const quantity = parseInt(qtyInput.value);
+                const subtotal = price * quantity;
+                subtotalElement.textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+                updateCartTotal();
+            };
+            
+            minusBtn.addEventListener('click', () => {
+                let value = parseInt(qtyInput.value);
+                if (value > 1) {
+                    qtyInput.value = value - 1;
+                    updateSubtotal();
+                }
+            });
+            
+            plusBtn.addEventListener('click', () => {
+                let value = parseInt(qtyInput.value);
+                qtyInput.value = value + 1;
+                updateSubtotal();
+            });
+            
+            // Prevent non-numeric input
+            qtyInput.addEventListener('input', () => {
+                qtyInput.value = qtyInput.value.replace(/[^0-9]/g, '');
+                if (qtyInput.value === '' || parseInt(qtyInput.value) < 1) {
+                    qtyInput.value = 1;
+                }
+                updateSubtotal();
+            });
+        });
+        
+        // Update cart total
+        function updateCartTotal() {
+            let total = 0;
+            document.querySelectorAll('.product-subtotal').forEach(element => {
+                const subtotal = parseFloat(element.textContent.replace('Rp ', '').replace(/\./g, ''));
+                total += subtotal;
+            });
+            
+            // Update the total in the summary
+            document.querySelector('.summary-totals .total span:last-child').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+            
+            // Update the subtotal in the summary
+            document.querySelector('.summary-totals .summary-row:first-child span:last-child').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+        
+        // Remove item from cart
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const cartItem = button.closest('.cart-item');
+                cartItem.classList.add('removing');
+                
+                setTimeout(() => {
+                    cartItem.remove();
+                    updateCartTotal();
+                    
+                    // Update cart count
+                    const cartItems = document.querySelectorAll('.cart-item').length;
+                    document.querySelector('.cart-icon span').textContent = cartItems;
+                    document.querySelector('.section-title').textContent = `Barang dalam Keranjang (${cartItems})`;
+                    
+                    // Show empty cart if no items left
+                    if (cartItems === 0) {
+                        document.querySelector('.cart-section').style.display = 'none';
+                        document.querySelector('.empty-cart').style.display = 'block';
+                        document.querySelector('.recommended-products').style.display = 'none';
+                        document.querySelector('.recently-viewed').style.display = 'none';
+                    }
+                }, 300);
+            });
+        });
+        
+        // Clear cart button
+        document.querySelector('.clear-cart').addEventListener('click', () => {
+            if (confirm('Apakah Anda yakin ingin mengosongkan keranjang belanja?')) {
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    item.remove();
+                });
+                
+                document.querySelector('.cart-icon span').textContent = '0';
+                document.querySelector('.cart-section').style.display = 'none';
+                document.querySelector('.empty-cart').style.display = 'block';
+                document.querySelector('.recommended-products').style.display = 'none';
+                document.querySelector('.recently-viewed').style.display = 'none';
+            }
+        });
+        
+        // Initialize cart total on page load
+        window.addEventListener('load', () => {
+            updateCartTotal();
+        });
+    </script>
+</body>
+</html>

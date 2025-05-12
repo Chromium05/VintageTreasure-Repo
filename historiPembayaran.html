@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histori Pembayaran - VintageTreasures</title>
+    <link rel="stylesheet" href="keranjangStyle.css">
+    <link rel="stylesheet" href="historiPembayaranStyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="landingPage.html" class="logo">Vintage<span>Treasures</span></a>
+                <div class="nav-links">
+                    <a href="landingPage.html">Home</a>
+                    <a href="artikel.html">Artikel</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span>0</span>
+                    </a>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Histori Pembayaran</h1>
+            <div class="breadcrumb">
+                <a href="landingPage.html">Home</a>
+                <span>/</span>
+                <a href="katalogProduk.html">Katalog</a>
+                <span>/</span>
+                <span>Histori Pembayaran</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section">
+        <div class="container">
+            <div class="history-container">
+                <!-- Filter and Search -->
+                <div class="history-filter">
+                    <div class="filter-group">
+                        <label for="status-filter">Filter Status:</label>
+                        <select id="status-filter" class="form-control">
+                            <option value="all">Semua Status</option>
+                            <option value="pending">Menunggu Pembayaran</option>
+                            <option value="processing">Diproses</option>
+                            <option value="shipped">Dikirim</option>
+                            <option value="delivered">Diterima</option>
+                            <option value="cancelled">Dibatalkan</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Filter Tanggal:</label>
+                        <select id="date-filter" class="form-control">
+                            <option value="all">Semua Waktu</option>
+                            <option value="30days">30 Hari Terakhir</option>
+                            <option value="6months">6 Bulan Terakhir</option>
+                            <option value="1year">1 Tahun Terakhir</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" class="form-control" placeholder="Cari nomor pesanan...">
+                        <button class="btn btn-sm">Cari</button>
+                    </div>
+                </div>
+
+                <!-- Orders List -->
+                <div class="orders-list">
+                    <!-- Order Item 1 -->
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">
+                                    <span>Nomor Pesanan:</span>
+                                    <strong>VT25051200123</strong>
+                                </div>
+                                <div class="order-date">
+                                    <span>Tanggal:</span>
+                                    <strong>12 Mei 2025</strong>
+                                </div>
+                            </div>
+                            <div class="order-status delivered">
+                                <span>Diterima</span>
+                            </div>
+                        </div>
+                        <div class="order-products">
+                            <div class="product-image">
+                                <img src="https://i.ebayimg.com/images/g/8FwAAOSwxT5luB1f/s-l960.webp" alt="Radio Klasik 1960">
+                            </div>
+                            <div class="product-details">
+                                <h3>Radio Klasik 1960</h3>
+                                <p>Quantity: 1</p>
+                                <p>Tahun: 1960</p>
+                            </div>
+                            <div class="order-total">
+                                <span>Total:</span>
+                                <strong>Rp 1.700.123</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-sm" onclick="location.href='detailHistori.html?id=VT25051200123'">Lihat Detail</button>
+                                <button class="btn btn-sm btn-outline">Beli Lagi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Item 2 -->
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">
+                                    <span>Nomor Pesanan:</span>
+                                    <strong>VT25042500087</strong>
+                                </div>
+                                <div class="order-date">
+                                    <span>Tanggal:</span>
+                                    <strong>25 April 2025</strong>
+                                </div>
+                            </div>
+                            <div class="order-status shipped">
+                                <span>Dikirim</span>
+                            </div>
+                        </div>
+                        <div class="order-products">
+                            <div class="product-image">
+                                <img src="https://www.sencor.com/getmedia/7160a430-53c5-4ee9-9a69-c6f179585f29/35038326.jpg.aspx?width=2100&height=2100&ext=.jpg" alt="Gramofon Klasik">
+                            </div>
+                            <div class="product-details">
+                                <h3>Gramofon Klasik</h3>
+                                <p>Quantity: 1</p>
+                                <p>Tahun: 1948</p>
+                            </div>
+                            <div class="order-total">
+                                <span>Total:</span>
+                                <strong>Rp 3.950.000</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-sm" onclick="location.href='detailHistori.html?id=VT25042500087'">Lihat Detail</button>
+                                <button class="btn btn-sm btn-outline">Beli Lagi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Item 3 -->
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">
+                                    <span>Nomor Pesanan:</span>
+                                    <strong>VT25031000042</strong>
+                                </div>
+                                <div class="order-date">
+                                    <span>Tanggal:</span>
+                                    <strong>10 Maret 2025</strong>
+                                </div>
+                            </div>
+                            <div class="order-status processing">
+                                <span>Diproses</span>
+                            </div>
+                        </div>
+                        <div class="order-products">
+                            <div class="product-image">
+                                <img src="https://hobikoe.com/uploads/all/gthGjcbmdGJv4fwhbHxZ7HLHcv58cNFklu955OYD.jpeg" alt="Telepon Putar Retro">
+                            </div>
+                            <div class="product-details">
+                                <h3>Telepon Putar Retro</h3>
+                                <p>Quantity: 1</p>
+                                <p>Tahun: 1965</p>
+                            </div>
+                            <div class="order-total">
+                                <span>Total:</span>
+                                <strong>Rp 850.000</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-sm" onclick="location.href='detailHistori.html?id=VT25031000042'">Lihat Detail</button>
+                                <button class="btn btn-sm btn-outline">Beli Lagi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Item 4 -->
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">
+                                    <span>Nomor Pesanan:</span>
+                                    <strong>VT25020500019</strong>
+                                </div>
+                                <div class="order-date">
+                                    <span>Tanggal:</span>
+                                    <strong>5 Februari 2025</strong>
+                                </div>
+                            </div>
+                            <div class="order-status pending">
+                                <span>Menunggu Pembayaran</span>
+                            </div>
+                        </div>
+                        <div class="order-products">
+                            <div class="product-image">
+                                <img src="https://images-cdn.ubuy.co.id/633bd723faec9b4e8e02b93c-olden-days-wall-clock-with-real-wood-4.jpg" alt="Jam Dinding Antik">
+                            </div>
+                            <div class="product-details">
+                                <h3>Jam Dinding Antik</h3>
+                                <p>Quantity: 1</p>
+                                <p>Tahun: 1955</p>
+                            </div>
+                            <div class="order-total">
+                                <span>Total:</span>
+                                <strong>Rp 1.050.000</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-sm" onclick="location.href='pembayaran.html'">Bayar Sekarang</button>
+                                <button class="btn btn-sm btn-outline">Batalkan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Item 5 -->
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <div class="order-number">
+                                    <span>Nomor Pesanan:</span>
+                                    <strong>VT25010300005</strong>
+                                </div>
+                                <div class="order-date">
+                                    <span>Tanggal:</span>
+                                    <strong>3 Januari 2025</strong>
+                                </div>
+                            </div>
+                            <div class="order-status cancelled">
+                                <span>Dibatalkan</span>
+                            </div>
+                        </div>
+                        <div class="order-products">
+                            <div class="product-image">
+                                <img src="https://m.media-amazon.com/images/I/81It0kFPq5L._AC_SX466_.jpg" alt="Kamera Polaroid SX-70">
+                            </div>
+                            <div class="product-details">
+                                <h3>Kamera Polaroid SX-70</h3>
+                                <p>Quantity: 1</p>
+                                <p>Tahun: 1972</p>
+                            </div>
+                            <div class="order-total">
+                                <span>Total:</span>
+                                <strong>Rp 2.300.000</strong>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-sm" onclick="location.href='detailHistori.html?id=VT25010300005'">Lihat Detail</button>
+                                <button class="btn btn-sm btn-outline">Beli Lagi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="pagination-item active">1</a>
+                    <a href="#" class="pagination-item">2</a>
+                    <a href="#" class="pagination-item">3</a>
+                    <a href="#" class="pagination-item">></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VintageTreasures</h3>
+                    <p>Temukan keindahan masa lalu melalui koleksi barang vintage berkualitas tinggi kami.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan</h3>
+                    <a href="landingPage.html">Home</a>
+                    <a href="katalogProduk.html">Katalog</a>
+                    <a href="#">Tentang Kami</a>
+                    <a href="#">Kontak</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kategori</h3>
+                    <a href="#">Elektronik</a>
+                    <a href="#">Furnitur</a>
+                    <a href="#">Aksesoris</a>
+                    <a href="#">Pakaian</a>
+                    <a href="#">Dekorasi</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p>📍 Jl. Vintage No. 123, Jakarta</p>
+                    <p>📱 +62 123 456 789</p>
+                    <p>✉️ info@vintagetreasures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 VintageTreasures. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Filter functionality
+        document.getElementById('status-filter').addEventListener('change', filterOrders);
+        document.getElementById('date-filter').addEventListener('change', filterOrders);
+        
+        function filterOrders() {
+            const statusFilter = document.getElementById('status-filter').value;
+            const dateFilter = document.getElementById('date-filter').value;
+            
+            // In a real application, this would filter the orders based on the selected criteria
+            // For this demo, we'll just show an alert
+            alert(`Filter applied: Status = ${statusFilter}, Date = ${dateFilter}`);
+        }
+    </script>
+</body>
+</html>
